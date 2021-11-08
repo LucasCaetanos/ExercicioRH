@@ -1,22 +1,21 @@
 import kotlin.math.min
 
-open class Funcionario (var firstName: String = "", var lastName: String = "", var registration: Int = 0,
-                        var age: Int = 60, var daysWorked: Double = 0.0, var vacationDaysTaken: Int = 30,
-                        var salary: Double = 2000.0, var yearsWorked: Int = 40){
+abstract class Funcionario(
+    val nome: String, val sobrenome: String, registro: Int, idade: Int, var diasTrabalhados: Int,
+    var diasFerias: Int, var salario: Double, var anosTrabalhados: Int
+) {
 
-    fun timeToRetirement(): Int {
-        var variavelTempo = min(60 - age, 40 - yearsWorked)
-        return(variavelTempo)
+    fun tempoAteAposentar(): Int {
+        return min(60 - idade , 40 - anosTrabalhados)
     }
 
-    fun vacationTimeLeft(): Int {
-        var tempoRestanteViajem = (daysWorked / 360)(30 - vacationDaysTaken)
-        return(tempoRestanteViajem)
+    fun tempoRestanteDeFerias(): Int {
+        return (diasTrabalhados / 360) * (30 - diasFerias)
+
     }
 
-    open fun calculateBonus(): Double {
-        var bonus = 2.2 * salary
-                return (bonus)
+    fun calcularBonus(): Double {
+        return 2.2 * salario
     }
 
 }

@@ -1,18 +1,16 @@
-open class SalesRepn (firstName: String = "", lastName: String = "",
-                      registration: Int = 0,
-                      age: Int = 60, daysWorked: Int = 360, vacationDaysTaken: Int = 30,
-                      salary: Double = 2000.0, yearsWorked: Int = 40, var salesMade: Double):
+class SalesRepn (nome: String, sobreNome: String,
+                 registro: Int,
+                 idade: Int, diasTrabalhados: Int, diasFerias: Int,
+                 salario: Double, anosTrabalhados: Int, var vendas: Int
+) :
 
 
-    Funcionario("Josinei", "da Silva", 12,){
+    Funcionario(nome, sobreNome, registro, idade, diasTrabalhados, diasFerias, salario, anosTrabalhados){
 
-    var employeeSales = arrayListOf(salesMade)
-    fun calculateComission(): Double {
-        var comission = 0.1 * salesMade
-        return(comission)
-    }
-
-    override fun calculateBonus(): Double {
-        return super.calculateBonus()
-    }
+        fun calculateComission(): Double {
+            return 0.1 * vendas
+        }
 }
+
+
+

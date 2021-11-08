@@ -1,16 +1,26 @@
-import Funcionario
-import SalesRepn
-import SalesManager
-
 fun main(args: Array<String>) {
 
-    val fabricio: Funcionario = Funcionario("Fabricio", "Calvanese",
-        123, 20, 30,)
+    val pedro = SalesRepn("Pedro","Antonio",1234,24,15,30,
+    2900.00,8,700)
 
-    val rodrigo: Funcionario = Funcionario("Rodrigo", "Albuquerque",
-        542, 60.0, 3)
+    val carlos = SalesRepn("Pedro","Antonio",1234,24,15,30,
+        2900.00,8,700)
 
-    Funcionario.registration(fabricio)
+    val jose = SalesRepn("Pedro","Antonio",1234,24,15,30,
+        2900.00,8,700)
+
+    val luiz = SalesManager("Pedro","Antonio",1234,24,15,30,
+        2900.00,8,700)
+
+    println("***Informações de Pedro")
+    println(pedro.tempoAteAposentar())
+    println(pedro.tempoRestanteDeFerias())
+    println(pedro.calcularBonus())
+    println(pedro.calculateComission())
+    println("--------------")
+
+    
+
 
 }
 

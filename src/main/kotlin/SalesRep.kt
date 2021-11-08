@@ -1,6 +1,3 @@
-package com.generation
-
-
 open class SalesRepn (firstName: String = "", lastName: String = "",
                       registration: Int = 0,
                       age: Int = 60, daysWorked: Int = 360, vacationDaysTaken: Int = 30,

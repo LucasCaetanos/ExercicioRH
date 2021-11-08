@@ -1,5 +1,3 @@
-package com.generation
-
 import kotlin.math.min
 
 open class Funcionario (var firstName: String = "", var lastName: String = "", var registration: Int = 0,

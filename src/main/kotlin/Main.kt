@@ -1,6 +1,6 @@
-import com.generation.Funcionario
-import com.generation.SalesRepn
-import com.generation.SalesManager
+import Funcionario
+import SalesRepn
+import SalesManager
 
 fun main(args: Array<String>) {
 

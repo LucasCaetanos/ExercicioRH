@@ -1,5 +1,3 @@
-package com.generation
-
 abstract class SalesManager {
 
     interface Funcionario {
